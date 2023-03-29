@@ -12,6 +12,7 @@ import { useContext } from "react";
 import { useEffect } from "react";
 import _ from "lodash";
 import Backdrop from "./components/backdrop";
+import MemebersSection from "./components/sections/TeamMemebers";
 function App() {
   const { selectedCard } = useContext(SelectedCardContext);
 
@@ -36,7 +37,8 @@ function App() {
       <div className="w-2/3">
         <Events />
       </div>
-      <ContactUs />
+      {/* <ContactUs /> */}
+      <MemebersSection />
     </Paper>
   );
 }
