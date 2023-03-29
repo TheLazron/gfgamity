@@ -1,1 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @tailwind utilities;
+
+/* _________________________________- */
+
+.slide h1 {
+  @apply transition-all duration-[0.3s] ease-[ease] -translate-y-5 opacity-0;
+  -webkit-transform: translateY(-20px);
+}
+.slide button {
+  @apply transition-all duration-[0.3s] ease-[ease] translate-y-5 opacity-0;
+  -webkit-transform: translateY(20px);
+}
+.slide p {
+  @apply transition-all duration-[0.3s] ease-[ease] translate-y-5 opacity-0;
+  -webkit-transform: translateY(20px);
+}
+
+.slide .description {
+  @apply transition-all duration-[0.3s] ease-[ease] translate-y-5 opacity-0;
+  -webkit-transform: translateY(20px);
+}
+
+.slide section * {
+  @apply transition-all duration-[0.3s] ease-[ease];
+}
+.slide section img {
+  @apply -translate-x-2.5 opacity-0;
+  -webkit-transform: translateX(-10px);
+}
+.slide section span {
+  @apply -translate-y-2.5 opacity-0;
+  -webkit-transform: translateY(-10px);
+}
+.slide section span strong {
+  @apply translate-y-2.5 opacity-0;
+  -webkit-transform: translateY(10px);
+}
+.slide.animateIn.previous h1,
+.slide.current h1,
+.slide.animateIn.next h1,
+.slide.animateIn.previous button,
+.slide.current button,
+.slide.animateIn.next button,
+.slide.animateIn.previous p,
+.slide.current p,
+.slide.current .description,
+.slide.animateIn.next p,
+.slide.animateIn.next .description,
+.slide.animateIn.previous section *,
+.slide.current section *,
+.slide.animateIn.next section * {
+  @apply translate-x-0 delay-[0.9s] opacity-100;
+  -webkit-transform: translateX(0);
+  -webkit-transition-delay: 0.9s;
+}
+.slide.animateIn.previous p,
+.slide.animateIn.next p,
+.slide.animateIn.next .description,
+.slide.animateIn.previous .description {
+  @apply delay-[1.1s];
+  -webkit-transition-delay: 1.1s;
+}
+.slide.animateIn.previous button,
+.slide.animateIn.next button {
+  @apply delay-[1.3s];
+  -webkit-transition-delay: 1.3s;
+}
+.slide.animateIn.previous section img,
+.slide.animateIn.next section img {
+  @apply delay-[1.3s];
+  -webkit-transition-delay: 1.3s;
+}
+.slide.animateIn.previous section span,
+.slide.animateIn.next section span {
+  @apply delay-[1.4s];
+  -webkit-transition-delay: 1.4s;
+}
+.slide.animateIn.previous section span strong,
+.slide.animateIn.next section span strong {
+  @apply delay-[1.5s];
+  -webkit-transition-delay: 1.5s;
+}
+.slide.animateOut h1 {
+  @apply delay-[0.3s];
+  -webkit-transition-delay: 0.3s;
+}
+.slide.animateOut p,
+.slide.animateOut .description {
+  @apply delay-[0.2s];
+  -webkit-transition-delay: 0.2s;
+}
+.slide.animateOut section span {
+  @apply delay-[0.1s];
+  -webkit-transition-delay: 0.1s;
+}
+.slide.animateOut section span strong {
+  @apply delay-[0s];
+  -webkit-transition-delay: 0s;
+}

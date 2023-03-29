@@ -10,10 +10,16 @@
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
-    "@mantine/core": "^6.0.4",
-    "@mantine/hooks": "^6.0.4",
+    "@mantine/carousel": "^6.0.5",
+    "@mantine/core": "^6.0.5",
+    "@mantine/hooks": "^6.0.5",
+    "@tabler/icons-react": "^2.11.0",
+    "lodash": "^4.17.21",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-animated-slider": "^2.0.0",
+    "react-dom": "^18.2.0",
+    "react-id-swiper": "^4.0.0",
+    "swiper": "^9.1.1"
   },
   "devDependencies": {
     "@types/autoprefixer": "^10.2.0",
