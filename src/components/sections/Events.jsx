@@ -11,7 +11,7 @@ const Events = () => {
   // const { selectedCard, setSelectedCard } = useContext(SelectedCardContext);
 
   return (
-    <div className="flex flex-col items-center p-4">
+    <div className="flex flex-col items-center p-4 mb-24">
       <div className="mb-16 flex flex-col gap-4 justify-center items-center">
         <Title className="font-bold text-5xl font-Poppins mb-5">
           Upcoming Events Lorem

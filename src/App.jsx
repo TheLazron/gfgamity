@@ -13,6 +13,8 @@ import { useEffect } from "react";
 import _ from "lodash";
 import Backdrop from "./components/backdrop";
 import MemebersSection from "./components/sections/TeamMemebers";
+import ContactModule from "./components/ContactModule";
+import Footer from "./components/sections/Footer";
 function App() {
   const { selectedCard } = useContext(SelectedCardContext);
 
@@ -25,8 +27,8 @@ function App() {
         title="GFG Amity Noida"
         links={[
           { link: "/about", label: "Home" },
-          { link: "/learn", label: "Features" },
-          { link: "/pricing", label: "Pricing" },
+          { link: "/learn", label: "Events" },
+          { link: "/pricing", label: "Memebers" },
         ]}
       />
       <HeroImageRight />
@@ -39,6 +41,8 @@ function App() {
       </div>
       {/* <ContactUs /> */}
       <MemebersSection />
+      <ContactUs />
+      <Footer />
     </Paper>
   );
 }

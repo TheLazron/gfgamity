@@ -11,6 +11,11 @@ import {
 import { UserInfoAction } from "../MemberCard";
 
 const useStyles = createStyles((theme) => ({
+  section: {
+    backgroundImage:
+      "linear-gradient(250deg, rgba(255, 255, 255, 0.9) 70%, #40C057 70%)",
+  },
+
   wrapper: {
     paddingTop: rem(80),
     paddingBottom: rem(50),
@@ -67,70 +72,78 @@ const MemebersSection = () => {
   const { classes } = useStyles();
   return (
     <>
-      <Container size={700} className={classes.wrapper}>
-        <Text color="green" className={`${classes.supTitle} `}>
-          Meat the Team
-        </Text>
-
-        <Title className={classes.title} order={1}>
-          The<span className={`${classes.highlight} text-green-600`}>team</span>{" "}
-          behind it all
-        </Title>
-
-        <Container size={660} p={0}>
-          <Text color="dimmed" className={classes.description}>
-            Ut mollit anim minim sit est ea deserunt aliquip. Ipsum tempor
-            exercitation laborum ex est duis et commodo laboris voluptate
-            consectetur cillum. Id dolore laborum magna consectetur veniam
-            ullamco culpa sit eiusmod culpa consequat Lorem commodo. Non aute
-            reprehenderit non proident eu quis non cupidatat laboris amet.
-          </Text>
-        </Container>
-      </Container>
-      <hr className="mx-2"></hr>
-
-      <SimpleGrid
-        cols={4}
-        spacing="xl"
-        breakpoints={[
-          { maxWidth: "62rem", cols: 2, spacing: "md" },
-          { maxWidth: "48rem", cols: 2, spacing: "sm" },
-          { maxWidth: "36rem", cols: 1, spacing: "sm" },
-        ]}
+      <div
+        className={`${classes.section} w-full flex flex-col items-center py-4`}
       >
-        <div>
-          {" "}
-          <UserInfoAction />
-        </div>
-        <div>
-          {" "}
-          <UserInfoAction />
-        </div>
-        <div>
-          {" "}
-          <UserInfoAction />
-        </div>
-        <div>
-          {" "}
-          <UserInfoAction />
-        </div>
-        <div>
-          {" "}
-          <UserInfoAction />
-        </div>
-        <div>
-          {" "}
-          <UserInfoAction />
-        </div>
-        <div>
-          {" "}
-          <UserInfoAction />
-        </div>
-        <div>
-          {" "}
-          <UserInfoAction />
-        </div>
-      </SimpleGrid>
+        <Container size={700} className={classes.wrapper}>
+          <Text color="green" className={`${classes.supTitle} `}>
+            Meat the Team
+          </Text>
+
+          <Title className={classes.title} order={1}>
+            The
+            <span className={`${classes.highlight} text-green-600 mx-1`}>
+              team
+            </span>{" "}
+            behind it all
+          </Title>
+
+          <Container size={660} p={0}>
+            <Text color="dimmed" className={classes.description}>
+              Ut mollit anim minim sit est ea deserunt aliquip. Ipsum tempor
+              exercitation laborum ex est duis et commodo laboris voluptate
+              consectetur cillum. Id dolore laborum magna consectetur veniam
+              ullamco culpa sit eiusmod culpa consequat Lorem commodo. Non aute
+              reprehenderit non proident eu quis non cupidatat laboris amet.
+            </Text>
+          </Container>
+        </Container>
+        <hr className="mx-2"></hr>
+
+        <SimpleGrid
+          className="w-2/3"
+          cols={4}
+          spacing="xl"
+          breakpoints={[
+            { maxWidth: "62rem", cols: 2, spacing: "md" },
+            { maxWidth: "48rem", cols: 2, spacing: "sm" },
+            { maxWidth: "36rem", cols: 1, spacing: "sm" },
+          ]}
+        >
+          <div>
+            {" "}
+            <UserInfoAction />
+          </div>
+          <div>
+            {" "}
+            <UserInfoAction />
+          </div>
+          <div>
+            {" "}
+            <UserInfoAction />
+          </div>
+          <div>
+            {" "}
+            <UserInfoAction />
+          </div>
+          <div>
+            {" "}
+            <UserInfoAction />
+          </div>
+          <div>
+            {" "}
+            <UserInfoAction />
+          </div>
+          <div>
+            {" "}
+            <UserInfoAction />
+          </div>
+          <div>
+            {" "}
+            <UserInfoAction />
+          </div>
+        </SimpleGrid>
+      </div>
     </>
   );
 };

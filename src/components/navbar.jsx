@@ -111,8 +111,8 @@ export function HeaderMiddle({ links }) {
   ));
 
   return (
-    <Header height={80} mb={10} className="w-full px-0 mx-0 flex items-center">
-      <Container className={`${classes.inner} mx-auto w-screen`}>
+    <Header height={80} mb={10} className="w-full py-6 mx-0 flex items-center">
+      <Container className={`${classes.inner}`}>
         <Burger
           opened={opened}
           onClick={toggle}
@@ -124,10 +124,10 @@ export function HeaderMiddle({ links }) {
         </Group>
         <Group>
           {/* <Icon3dRotate /> */}
-          <div className="w-10 h-10 flex justify-around align-baseline flex-auto">
+          <div className="w-10 h-10 flex justify-around align-baseline flex-auto basis-2">
             <img src={GFG} className="w-full h-full" />
           </div>
-          <Title size={30} className="font-Roboto text-neutral-500">
+          <Title size={30} className="font-Poppins text-neutral-500">
             GFG Amity Noida
           </Title>
         </Group>

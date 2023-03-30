@@ -51,7 +51,6 @@ const SimpleSwiper = ({ openModal }) => {
   return (
     <>
       <Slider
-        autoplay={true}
         infinite={true}
         nextButton={<IconChevronRight color="white" />}
         previousButton={<IconChevronLeft color="white" />}
