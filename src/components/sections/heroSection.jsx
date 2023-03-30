@@ -13,7 +13,7 @@ const useStyles = createStyles((theme) => ({
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundImage:
-      "linear-gradient(250deg, rgba(0, 0, 0, 0.3) 30%, #062e17 70%), url(https://images.unsplash.com/photo-1675334758608-8f2af855a8b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80)",
+      "linear-gradient(250deg, rgba(0, 0, 0, 0.2) 30%, rgba(17, 115, 50, 0.2) 70%), url(https://images.unsplash.com/photo-1620120966883-d977b57a96ec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80)",
     paddingTop: `calc(${theme.spacing.xl} * 5)`,
     paddingBottom: `calc(${theme.spacing.xl} * 5)`,
   },
@@ -83,9 +83,9 @@ const useStyles = createStyles((theme) => ({
 export function HeroImageRight() {
   const { classes } = useStyles();
   return (
-    <div className={`${classes.root} w-full mb-12`}>
+    <div className={`${classes.root} w-full mb-12 `}>
       <Container size="xl">
-        <div className={classes.inner}>
+        <div className={`${classes.inner} mx-12`}>
           <div className={classes.content}>
             <Title className={` font-Poppins font-medium ${classes.title}`}>
               Lorem{" "}

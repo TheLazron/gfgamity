@@ -20,6 +20,12 @@ import {
 import GFG from "../../public/icons8-geeksforgeeks-144.svg";
 
 const useStyles = createStyles((theme) => ({
+  header: {
+    background: "rgb(255, 255, 255)",
+    background:
+      "linear-gradient(307deg, rgba(255,255,255,0.95) 13%, rgba(235,255,251,0.95) 37%, rgba(244,255,241,0.95) 67%, rgba(231,231,231,0.95) 77%)",
+  },
+
   inner: {
     display: "flex",
     justifyContent: "space-between",
@@ -33,15 +39,15 @@ const useStyles = createStyles((theme) => ({
   },
 
   links: {
-    width: rem(260),
-    justifyContent: "space-around",
-    [theme.fn.smallerThan("sm")]: {
+    width: rem(10),
+    justifyContent: "center",
+    [theme.fn.smallerThan("md")]: {
       display: "none",
     },
   },
 
   social: {
-    width: rem(260),
+    // width: rem(60),
 
     [theme.fn.smallerThan("sm")]: {
       width: "auto",
@@ -52,7 +58,7 @@ const useStyles = createStyles((theme) => ({
   burger: {
     marginRight: theme.spacing.md,
 
-    [theme.fn.largerThan("sm")]: {
+    [theme.fn.largerThan("md")]: {
       display: "none",
     },
   },
@@ -60,8 +66,10 @@ const useStyles = createStyles((theme) => ({
   link: {
     display: "block",
     lineHeight: 1,
-    padding: `${rem(8)} ${rem(12)}`,
+    padding: `${rem(10)} ${rem(14)}`,
     borderRadius: theme.radius.sm,
+    marginLeft: rem(10),
+    marginRight: rem(10),
     textDecoration: "none",
     color:
       theme.colorScheme === "dark"
@@ -111,31 +119,40 @@ export function HeaderMiddle({ links }) {
   ));
 
   return (
-    <Header height={80} mb={10} className="w-full py-6 mx-0 flex items-center">
-      <Container className={`${classes.inner}`}>
+    <Header
+      height={80}
+      mb={10}
+      className={`${classes.header} w-full py-6 mx-0 flex items-center justify-around sticky`}
+    >
+      {/* <Container className={`${classes.inner}`}> */}
+      <div className="flex w-full ">
         <Burger
           opened={opened}
           onClick={toggle}
           size="sm"
           className={classes.burger}
         />
-        <Group className={`${classes.links} flex-auto`} spacing={5} noWrap>
+        <Group
+          className={`${classes.links} flex-1 w-2/4 basis-1`}
+          spacing={2}
+          noWrap
+        >
           {items}
         </Group>
-        <Group>
+        <Group className=" flex-1 basis-1 self-center " position="center">
           {/* <Icon3dRotate /> */}
-          <div className="w-10 h-10 flex justify-around align-baseline flex-auto basis-2">
+          <div className=" h-12 flex justify-around align-baseline">
             <img src={GFG} className="w-full h-full" />
           </div>
-          <Title size={30} className="font-Poppins text-neutral-500">
+          <Title size={30} className="font-Poppins text-black">
             GFG Amity Noida
           </Title>
         </Group>
 
         <Group
           spacing={5}
-          className={`${classes.social} flex-auto`}
-          position="right"
+          className={`${classes.social} flex-1 basis-1`}
+          position="center"
           noWrap
         >
           {/* <ActionIcon size="lg">
@@ -147,9 +164,11 @@ export function HeaderMiddle({ links }) {
           <ActionIcon size="lg">
             <IconBrandInstagram size="1.1rem" stroke={1.5} />
           </ActionIcon> */}
-          <Button color="green">Contact Us</Button>
+          <Button size="lg" color="green" radius="md">
+            Contact Us
+          </Button>
         </Group>
-      </Container>
+      </div>
     </Header>
   );
 }
